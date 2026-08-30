@@ -1,0 +1,34 @@
+name: Fishera
+version: 1.0.0-beta.1
+main: com.sythel.fishera.Fishera
+api-version: '1.21'
+
+author: Sythel
+description: Minecraft sunucuları için kapsamlı balıkçılık eklentisi.
+
+depend:
+  - Vault
+
+commands:
+  fish:
+    description: Fishera Balıkçılık menüsünü açar.
+    usage: /fish
+    aliases:
+      - fishing
+    permission: fishera.use
+    permission-message: '§cBu komutu kullanmak için yetkin yok.'
+
+permissions:
+  fishera.use:
+    description: Fishera Balıkçılık sistemini kullanma yetkisi verir.
+    default: true
+
+  fishera.reload:
+    description: Fishera Balıkçılık yapılandırma dosyalarını yeniden yükleme yetkisi verir.
+    default: op
+
+  fishera.admin:
+    description: Tüm Fishera Balıkçılık yönetici komutlarına erişim sağlar.
+    default: op
+    children:
+      fishera.reload: true

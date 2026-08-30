@@ -1,0 +1,111 @@
+baits:
+
+  solucan:
+    name: "&aSolucan"
+    description: "&7Doğal ve basit bir balık yemi."
+    material: WHEAT_SEEDS
+    custom-model-data: 0
+    price: 100
+    weight: 1
+    speed: 1
+    luck: 0
+    max-amount: 10
+
+  balik_parcasi:
+    name: "&fBalık Parçası"
+    description: "&7Büyük balıkları cezbetmek için kullanılır."
+    material: SALMON
+    custom-model-data: 0
+    price: 200
+    weight: 2
+    speed: 2
+    luck: 0
+    max-amount: 10
+
+  karides:
+    name: "&eKarides"
+    description: "&7Kaliteli bir deniz yemi."
+    material: COOKED_COD
+    custom-model-data: 0
+    price: 350
+    weight: 3
+    speed: 3
+    luck: 1
+    max-amount: 10
+
+  deniz_midyesi:
+    name: "&bDeniz Midyesi"
+    description: "&7Nadir balıkları cezbettiği söylenir."
+    material: NAUTILUS_SHELL
+    custom-model-data: 0
+    price: 500
+    weight: 3
+    speed: 4
+    luck: 2
+    max-amount: 10
+
+  kalamar:
+    name: "&9Kalamar"
+    description: "&7İri ve değerli balıkları cezbetmek için kullanılır."
+    material: INK_SAC
+    custom-model-data: 0
+    price: 750
+    weight: 5
+    speed: 5
+    luck: 3
+    max-amount: 10
+
+  yengec_eti:
+    name: "&6Yengeç Eti"
+    description: "&7Güçlü bir deniz yemi."
+    material: COOKED_COD
+    custom-model-data: 0
+    price: 1000
+    weight: 6
+    speed: 5
+    luck: 4
+    max-amount: 10
+
+  istiridye:
+    name: "&dİstiridye"
+    description: "&7Değerli balıkları cezbetmek için kullanılır."
+    material: HEART_OF_THE_SEA
+    custom-model-data: 0
+    price: 1400
+    weight: 5
+    speed: 6
+    luck: 5
+    max-amount: 10
+
+  deniz_kestanesi:
+    name: "&5Deniz Kestanesi"
+    description: "&7Oldukça kaliteli bir deniz yemi."
+    material: PRISMARINE_SHARD
+    custom-model-data: 0
+    price: 1900
+    weight: 7
+    speed: 7
+    luck: 6
+    max-amount: 10
+
+  deniz_salyangozu:
+    name: "&3Deniz Salyangozu"
+    description: "&7Nadir balıkçılar tarafından tercih edilir."
+    material: PRISMARINE_CRYSTALS
+    custom-model-data: 0
+    price: 2500
+    weight: 7
+    speed: 8
+    luck: 7
+    max-amount: 10
+
+  usta_yem_karisimi:
+    name: "&6Usta Yem Karışımı"
+    description: "&7Usta balıkçıların hazırladığı özel karışım."
+    material: GOLD_NUGGET
+    custom-model-data: 0
+    price: 3500
+    weight: 9
+    speed: 9
+    luck: 8
+    max-amount: 10

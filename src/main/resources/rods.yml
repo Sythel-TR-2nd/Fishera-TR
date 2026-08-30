@@ -1,0 +1,363 @@
+# ============================================================
+# Fishera Balıkçılık | Olta Ayarları
+# Developer: Sythel
+# ============================================================
+#
+
+#   max-weight → Yakalanabilecek maksimum balık ağırlığı
+#   max-rarity → Yakalanabilecek en yüksek nadirlik
+#   min/max-wait → Balığın vurması için bekleme süresi
+#   weight → Daha ağır balık yakalama avantajı
+#   speed → Daha kısa bekleme süresi
+#   luck → Nadir balık şansını artırır
+#   sell → Balık satış gelirini artırır
+#
+# ------------------------------------------------------------
+# max-weight
+# ------------------------------------------------------------
+#
+# Oltanın taşıyabileceği en yüksek balık ağırlığıdır.
+#
+# Örnek:
+#   max-weight: 50
+#
+# 50 KG'dan ağır bir balık bu oltayla yakalanamaz.
+#
+#
+# ------------------------------------------------------------
+# max-rarity
+# ------------------------------------------------------------
+#
+# Oltanın yakalayabileceği en yüksek balık nadirliğidir.
+#
+# Kullanılabilen nadirlikler:
+#
+#   COMMON
+#   UNCOMMON
+#   RARE
+#   EPIC
+#   LEGENDARY
+#
+# Örneğin:
+#
+#   max-rarity: EPIC
+#
+# Bu oltayla Legendary balık yakalanmaz.
+#
+# ------------------------------------------------------------
+# min-wait / max-wait
+# ------------------------------------------------------------
+#
+# Balığın oltaya vurması için beklenecek süreyi belirler.
+# Değerler saniye cinsindendir.
+#
+# Örneğin:
+#
+#   min-wait: 3
+#   max-wait: 7
+#
+# Balık, 3 ile 7 saniye arasında rastgele bir sürede vurur.
+#
+# ------------------------------------------------------------
+# weight
+# ------------------------------------------------------------
+#
+# Yakalanan balıkların ağırlığını etkiler.
+#
+# Değer yükseldikçe balıkların ağırlığı kendi aralığının
+# üst tarafına doğru kayar. Daha ağır balıklar daha yüksek
+# satış fiyatına sahip olacağı için bu özellik gelirini de artırır.
+#
+# Örnek:
+#
+#   weight: 0
+#
+# Normal ağırlık dağılımı.
+#
+#   weight: 300
+#
+# Balıklar ortalama olarak daha ağır gelir.
+#
+#   weight: 1000
+#
+# Balıkların maksimum ağırlığa yaklaşma ihtimali oldukça artar.
+#
+# ------------------------------------------------------------
+# speed
+# ------------------------------------------------------------
+#
+# Balığın oltaya vurmasını hızlandırır.
+#
+# Speed arttıkça bekleme süresi kısalır.
+#
+# Örneğin:
+#
+#   speed: 0
+#
+# Hız bonusu yoktur.
+#
+#   speed: 50
+#
+# Yaklaşık 5 saniyelik bir hız bonusu sağlar.
+#
+#   speed: 100
+#
+# Yaklaşık 10 saniyelik bir hız bonusu sağlar.
+#
+# Çok yüksek değerlerde bile bekleme süresi güvenli bir
+# minimum değerin altına düşmez.
+#
+# ------------------------------------------------------------
+# luck
+# ------------------------------------------------------------
+#
+# Daha nadir balıkları yakalama şansını etkiler.
+#
+# Luck arttıkça yaygın balıkların ağırlığı azalırken,
+# nadir balıkların ağırlığı artar.
+#
+# Kısaca:
+#
+#   COMMON      ↓
+#   UNCOMMON    ↓
+#   RARE        ↑
+#   EPIC        ↑
+#   LEGENDARY   ↑
+#
+# Bu özellik doğrudan bir balığın Chance değerini değiştirmez;
+# mevcut şanslara ek bir etki uygular.
+#
+# ------------------------------------------------------------
+# sell
+# ------------------------------------------------------------
+#
+# Yakalanan balıkların satış gelirine yüzde olarak bonus verir.
+#
+# Örneğin:
+#
+#   sell: 10
+#
+# Balıklar %10 daha fazla fiyata satılır.
+#
+#   sell: 50
+#
+# Balıklar %50 daha fazla fiyata satılır.
+#
+# Hesaplama:
+#
+#   Son Fiyat = Hesaplanan Fiyat × (1 + sell / 100)
+#
+#
+# ============================================================
+
+ilk_iz:
+  name: "&fİlk İz"
+  series: KIYI_MIRASI
+  description: "Her usta balıkçı ilk izini bu oltayla bırakmıştır."
+  material: FISHING_ROD
+  custom-model-data: 1000
+  price: 5000
+  max-weight: 5.0
+  max-rarity: COMMON
+  min-wait: 10
+  max-wait: 15
+  weight: 0
+  speed: 0
+  luck: 0
+  sell: 0
+  lore:
+    - ""
+    - "&7Her yolculuk ilk düğümle başlar."
+    - "&7Süre: 10-15 saniye"
+    - ""
+
+dalgabuken:
+  name: "&aDalgabüken"
+  series: KIYI_MIRASI
+  description: "En sert dalga bile onu yolundan çeviremez."
+  material: FISHING_ROD
+  custom-model-data: 1002
+  price: 15000
+  max-weight: 10.0
+  max-rarity: COMMON
+  min-wait: 8
+  max-wait: 12
+  weight: 2
+  speed: 1
+  luck: 0
+  sell: 0
+  lore:
+    - ""
+    - "&7Sabırla güçlenenlerin oltası."
+    - "&7Süre: 8-12 saniye"
+    - ""
+
+
+gelgitin_cocugu:
+  name: "&2Gelgitin Çocuğu"
+  series: KIYI_MIRASI
+  description: "Akıntılarla büyüyen balıkçıların simgesi."
+  material: FISHING_ROD
+  custom-model-data: 1005
+  price: 30000
+  max-weight: 10.0
+  max-rarity: UNCOMMON
+  min-wait: 5
+  max-wait: 15
+  weight: 3
+  speed: 3
+  luck: 0
+  sell: 2
+  lore:
+    - ""
+    - "&7Gelgitlerin ritmini hisseder."
+    - "&7Süre: 5-15 saniye"
+    - ""
+
+
+deniz_fisiltisi:
+  name: "&6Deniz Fısıltısı"
+  series: GELGIT_MUHAFIZLARI
+  description: "Deniz herkese konuşmaz."
+  material: FISHING_ROD
+  custom-model-data: 1013
+  price: 50000
+  max-weight: 15.0
+  max-rarity: UNCOMMON
+  min-wait: 5
+  max-wait: 10
+  weight: 4
+  speed: 2
+  luck: 0
+  sell: 2
+  lore:
+    - ""
+    - "&7Deniz yalnız seçtiklerine fısıldar."
+    - "&7Süre: 5-10 saniye"
+    - ""
+
+
+kader_ipligi:
+  name: "&5Kader İpliği"
+  series: TALIH_TARIKATI
+  description: "Denizin yazdığı kaderi yeniden örer."
+  material: FISHING_ROD
+  custom-model-data: 1016
+  price: 75000
+  max-weight: 20.0
+  max-rarity: RARE
+  min-wait: 5
+  max-wait: 15
+  weight: 2
+  speed: 2
+  luck: 4
+  sell: 3
+  lore:
+    - ""
+    - "&7Kader bazen yeniden yazılır."
+    - ""
+
+
+
+hukumdarin_eli:
+  name: "&6Hükümdarın Eli"
+  series: KRALIYET_HAZINESI
+  description: "Bir zamanlar yalnızca hükümdar tarafından kullanıldı."
+  material: FISHING_ROD
+  custom-model-data: 1023
+  price: 125000
+  max-weight: 10.0
+  max-rarity: RARE
+  min-wait: 5
+  max-wait: 10
+  weight: 5
+  speed: 10
+  luck: 10
+  sell: 5
+  lore:
+    - ""
+    - "&7Gücün sembolü."
+    - ""
+
+
+leviathan_disi:
+  name: "&cLeviathan Dişi"
+  series: KADIM_EMANETLER
+  description: "Denizlerin ilk canavarından koparıldığı söylenir."
+  material: FISHING_ROD
+  custom-model-data: 1030
+  price: 175000
+  max-weight: 20.0
+  max-rarity: RARE
+  min-wait: 4
+  max-wait: 9
+  weight: 4
+  speed: 3
+  luck: 5
+  sell: 10
+  lore:
+    - ""
+    - "&7Denizin korkusu artık senin elinde."
+    - ""
+
+okyanusun_kalbi:
+  name: "&9Okyanusun Kalbi"
+  series: FISHERA_MIRASI
+  description: "Hiç kimsenin ulaşamadığı derinliklerde doğdu."
+  material: FISHING_ROD
+  custom-model-data: 1037
+  price: 250000
+  max-weight: 30.0
+  max-rarity: EPIC
+  min-wait: 5
+  max-wait: 10
+  weight: 10
+  speed: 10
+  luck: 10
+  sell: 10
+  lore:
+    - ""
+    - "&7Denizin attığı son kalp."
+    - ""
+
+
+son_balikci:
+  name: "&cSon Balıkçı"
+  series: FISHERA_MIRASI
+  description: "Efsaneler, son ustanın bu oltayla kaybolduğunu anlatır."
+  material: FISHING_ROD
+  custom-model-data: 1040
+  price: 350000
+  max-weight: 50.0
+  max-rarity: EPIC
+  min-wait: 4
+  max-wait: 7
+  weight: 10
+  speed: 15
+  luck: 15
+  sell: 10
+  lore:
+    - ""
+    - "&7Her çağın son bir balıkçısı vardır."
+    - ""
+
+fisheranin_mirasi:
+  name: "&6&lFishera'nın Mirası"
+  series: FISHERA_MIRASI
+  description: "Hiçbir dükkânda satılmayan, yalnızca efsanelerde anlatılan olta."
+  material: FISHING_ROD
+  custom-model-data: 1041
+  price: 1000000
+  max-weight: 100.0
+  max-rarity: LEGENDARY
+  min-wait: 3
+  max-wait: 7
+  weight: 25
+  speed: 20
+  luck: 30
+  sell: 20
+  lore:
+    - ""
+    - "&6Balıkçılığın ulaştığı son nokta."
+    - "&6Bu oltaya sahip olanın adı unutulmaz."
+    - ""

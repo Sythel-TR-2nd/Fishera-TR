@@ -1,0 +1,454 @@
+gui:
+
+  main:
+    title: "&#4FC3F7Fishera Balıkçılık"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    items:
+
+      rods:
+        material: "FISHING_ROD"
+        name: "&#4FC3F7🎣 Oltalar"
+        lore:
+          - ""
+          - "&7Yeni oltalar satın al."
+          - ""
+          - "&eTıklayarak aç."
+
+      bait:
+        material: "WHEAT_SEEDS"
+        name: "&#9CCC65🪱 Yemler"
+        lore:
+          - ""
+          - "&7Yemlerini görüntüle."
+          - ""
+          - "&eTıklayarak aç."
+
+      sell:
+        material: "GOLD_INGOT"
+        name: "&#FFD54F💰 Satış"
+        lore:
+          - ""
+          - "&7Balıklarını sat."
+          - ""
+          - "&eTıklayarak aç."
+
+      collection:
+        material: "WRITTEN_BOOK"
+        name: "&#4FC3F7📖 Koleksiyon"
+        lore:
+          - ""
+          - "&7Balık koleksiyonunu görüntüle."
+          - ""
+          - "&eTıklayarak aç."
+
+      top:
+        material: "PLAYER_HEAD"
+        name: "&#FFB74D🏆 Top List"
+        lore:
+          - ""
+          - "&7En iyi balıkçılar."
+          - ""
+          - "&eTıklayarak aç."
+
+      tasks:
+        material: "MAP"
+        name: "&#BA68C8📜 Görevler"
+        lore:
+          - ""
+          - "&7Görevlerini görüntüle."
+          - ""
+          - "&eTıklayarak aç."
+
+
+  bait:
+    title: "&#4FC3F7Fishera • Yemler"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    buttons:
+
+      previous-page:
+        material: "ARROW"
+        name: "&e◀ Önceki Sayfa"
+        lore:
+          - "&7Önceki yemlere dön."
+
+      main-menu:
+        material: "BARRIER"
+        name: "&e← Ana Menü"
+        lore:
+          - "&7Ana menüye dön."
+
+      next-page:
+        material: "ARROW"
+        name: "&eSonraki Sayfa ▶"
+        lore:
+          - "&7Daha fazla yem görüntüle."
+
+
+  rod:
+    title: "&#4FC3F7Fishera • Oltalar"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    buttons:
+
+      previous-page:
+        material: "ARROW"
+        name: "&e◀ Önceki Sayfa"
+        lore:
+          - "&7Önceki oltalara dön."
+
+      main-menu:
+        material: "BARRIER"
+        name: "&e← Ana Menü"
+        lore:
+          - "&7Ana menüye dön."
+
+      next-page:
+        material: "ARROW"
+        name: "&eSonraki Sayfa ▶"
+        lore:
+          - "&7Daha fazla olta görüntüle."
+
+
+  sell:
+    title: "&#FFD54FBalık Pazarı"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    buttons:
+
+      sell:
+        material: "GOLD_INGOT"
+        name: "&#FFD54F&l💰 Tüm Balıkları Sat"
+        lore:
+          - ""
+          - "&7Envanterindeki tüm"
+          - "&7Fishera balıklarını anında satar."
+          - ""
+          - "&a▶ Satmak için tıkla."
+
+      balance:
+        material: "SUNFLOWER"
+        name: "&#FBC02D&l💵 Mevcut Bakiye"
+        lore:
+          - ""
+          - "&7Hesabındaki para:"
+          - ""
+          - "&6%balance% ⛃"
+
+      value:
+        material: "EMERALD"
+        name: "&#66BB6A&l📊 Envanter Değeri"
+        lore:
+          - ""
+          - "&7Balık Sayısı: &f%amount%"
+          - ""
+          - "&7Satış Kazancı:"
+          - "&6%value% ⛃"
+
+      close:
+        material: "BARRIER"
+        name: "&c✖ Kapat"
+        lore:
+          - "&7Menüyü kapat."
+
+
+  collection:
+    title: "&#4FC3F7Balık Koleksiyonu"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    buttons:
+
+      main-menu:
+        material: "BARRIER"
+        name: "&e← Ana Menü"
+        lore:
+          - "&7Ana menüye dön."
+
+    statistics:
+
+      material: "WRITTEN_BOOK"
+
+      name: "&#4FC3F7&l📖 Koleksiyon İlerlemesi"
+
+      lore:
+        - "&8━━━━━━━━━━━━━━━━━━━━━━"
+        - ""
+        - "&bToplam Tür: &f%total%"
+        - "&aKeşfedilen: &f%caught%"
+        - "&cEksik: &f%missing%"
+        - ""
+        - "&eTamamlanma"
+        - "%progress%"
+        - "&f%percent%% &8(%caught%/%total%)"
+        - ""
+        - "&8━━━━━━━━━━━━━━━━━━━━━━"
+        - "&7Her nadirlik seviyesini"
+        - "&7tamamlayarak gerçek bir"
+        - "&7usta balıkçı ol!"
+
+      progress-bar:
+
+        size: 16
+
+        filled-character: "█"
+
+        empty-character: "█"
+
+        filled-color: "&a"
+
+        empty-color: "&7"
+
+      rarities:
+
+        common:
+          - "&#8BC34A★ Common &7(%caught%/%total%)"
+
+        uncommon:
+          - "&#29B6F6★★ Uncommon &7(%caught%/%total%)"
+
+        rare:
+          - "&#AB47BC★★★ Rare &7(%caught%/%total%)"
+
+        epic:
+          - "&#FB8C00★★★★ Epic &7(%caught%/%total%)"
+
+        legendary:
+          - "&#E53935★★★★★ Legendary &7(%caught%/%total%)"
+
+
+    fish:
+
+      unknown-name: "&8???????"
+
+      rarity-description-prefix: "&7"
+
+      separator: "&8────────────────"
+
+      details-button: "&e▶ Detayları görmek için tıkla."
+
+      caught:
+
+        description: "&a✔ Bu balığı keşfettin."
+
+        total-caught-label: "&7Toplam Yakalanan"
+
+        total-caught-value: "&f%catch-count%"
+
+        heaviest-label: "&7En Ağır"
+
+        heaviest-value: "&f%best-weight% kg"
+
+        most-valuable-label: "&7En Değerli"
+
+        most-valuable-value: "&6%best-price% ⛃"
+
+        first-catch-label: "&7İlk Yakalanma"
+
+        first-catch-value: "&f%first-catch%"
+
+      unknown:
+
+        description: "&c🔒 Henüz keşfedilmedi."
+
+        hints-title: "&6İpuçları"
+
+        hint-format: "&7• %hint%"
+
+
+  fish-detail:
+
+    title: "&#4FC3F7Fishera • Balık Detayları"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    fish:
+
+      rarity-description-prefix: "&7"
+
+    statistics:
+
+      material: "BOOK"
+
+      name: "&b📖 İstatistikler"
+
+      total-caught-label: "&7Toplam Yakalanan"
+
+      total-caught-value: "&f%catch-count%"
+
+      heaviest-label: "&7En Ağır"
+
+      heaviest-value: "&f%best-weight% kg"
+
+      most-valuable-label: "&7En Değerli"
+
+      most-valuable-value: "&6%best-price% ⛃"
+
+      first-catch-label: "&7İlk Yakalanma"
+
+      first-catch-value: "&f%first-catch%"
+
+    information:
+
+      material: "WRITABLE_BOOK"
+
+      name: "&6💡 Balık Bilgisi"
+
+      hint-format: "&7• %hint%"
+
+    buttons:
+
+      back:
+        material: "ARROW"
+        name: "&e◀ Geri"
+        lore:
+          - "&7Koleksiyona dön."
+
+      close:
+        material: "BARRIER"
+        name: "&c✖ Kapat"
+        lore:
+          - "&7Menüyü kapat."
+
+
+  top:
+
+    title: "&#FFB74DFishera • Top List"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    buttons:
+
+      money:
+        material: "GOLD_INGOT"
+        name: "&#FFD54F💰 Para"
+        lore:
+          - ""
+          - "&7En zengin balıkçılar."
+          - ""
+          - "&eTıklayarak görüntüle."
+
+      fish:
+        material: "COD"
+        name: "&#4FC3F7🐟 Balık"
+        lore:
+          - ""
+          - "&7En çok balık yakalayanlar."
+          - ""
+          - "&eTıklayarak görüntüle."
+
+      weight:
+        material: "NAUTILUS_SHELL"
+        name: "&#81D4FA⚖ Ağırlık"
+        lore:
+          - ""
+          - "&7En ağır balıkları yakalayanlar."
+          - ""
+          - "&eTıklayarak görüntüle."
+
+      collection:
+        material: "WRITTEN_BOOK"
+        name: "&#BA68C8📖 Koleksiyon"
+        lore:
+          - ""
+          - "&7En geniş koleksiyona sahip"
+          - "&7balıkçılar."
+          - ""
+          - "&eTıklayarak görüntüle."
+
+      back:
+        material: "BARRIER"
+        name: "&#EF5350← Geri"
+        lore:
+          - "&7Önceki menüye dön."
+
+    entry:
+
+      name: "&6#%place% &f%player%"
+
+      value: "&7Değer: &e%value% %extra%"
+
+
+  task:
+
+    title: "&#BA68C8Fishera • Görevler"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    buttons:
+
+      previous-page:
+        material: "ARROW"
+        name: "&e◀ Önceki Sayfa"
+        lore:
+          - "&7Önceki görev sayfasına dön."
+
+      main-menu:
+        material: "BARRIER"
+        name: "&e← Ana Menü"
+        lore:
+          - "&7Ana menüye dön."
+
+      next-page:
+        material: "ARROW"
+        name: "&eSonraki Sayfa ▶"
+        lore:
+          - "&7Daha fazla görev görüntüle."
+
+    statuses:
+
+      claimed:
+        material: "LIME_DYE"
+        text: "&a✔ Tamamlandı"
+
+      completed:
+        material: "GOLD_INGOT"
+        text: "&6★ Ödülünü Al!"
+
+      active:
+        material: "WRITABLE_BOOK"
+        text: "&e◆ Aktif Görev"
+
+      locked:
+        material: "GRAY_DYE"
+        text: "&8🔒 Kilitli"
+
+    locked-lore:
+
+      - ""
+      - "&8Bu görev henüz kilitli."
+      - "&8Önceki görevin ödülünü al."
+      - ""
+      - "%status%"
+
+    task-lore:
+
+      - ""
+      - "%description%"
+      - ""
+      - "&7İlerleme: &f%progress% &8/ &f%target%"
+      - ""
+      - "&7Ödül: &6%reward% ⛃"
+      - ""
+      - "%status%"

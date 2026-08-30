@@ -1,0 +1,90 @@
+messages:
+
+  general:
+
+    no-balance: "&cYeterli bakiyen yok."
+
+    inventory-full: "&cEnvanterinde yeterli boş alan yok."
+
+    invalid-rod: "&cBalık tutmak için Fishera oltası kullanmalısın."
+
+    fish-not-discovered: "&cBu balığı henüz keşfetmedin."
+
+    separator: "&6&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+    purchase-success: "&a✔ Satın alım başarılı!"
+
+
+  bait:
+
+    purchased: "&7Yem: &f{bait}"
+
+    price: "&7Ödenen: &6{price} ⛃"
+
+    already-equipped: "&cBu oltada zaten başka bir yem bulunuyor."
+
+    capacity-full: "&cBu oltanın yem kapasitesi dolu."
+
+    equipped: "&a✔ &f{amount} adet {bait} &foltaya takıldı."
+
+
+  rod:
+
+    purchased: "&7Olta: &f{rod}"
+
+    price: "&7Ödenen: &6{price} ⛃"
+
+
+  fishing:
+
+    bite: "&bBalık vurdu!"
+
+    caught: "&a✔ Balık yakalandı: &f{fish}"
+
+    missed: "&c✘ Balık kaçtı!"
+
+    invalid-rod: "&cBalık tutmak için bir Fishera oltası kullanmalısın."
+
+    invalid-rod-type: "&cGeçersiz olta."
+
+    no-fish: "&cBu oltayla yakalanabilecek balık bulunamadı."
+
+    too-heavy: "&c&lBalık Kaçtı!"
+
+    too-heavy-detail: "&7Bu balık oltanın taşıyabileceğinden daha ağırdı."
+
+    max-weight: "&7Maksimum taşıma kapasitesi: &f{weight} kg"
+
+
+  task:
+
+    locked: "&cBu görev henüz kilitli."
+
+    previous-reward-required: "&7Önceki görevin ödülünü almalısın."
+
+    completed: "&6&l★ GÖREV TAMAMLANDI!"
+
+    name: "&7{task}"
+
+    claim-in-menu: "&eÖdülünü almak için görev menüsünü aç."
+
+    all-completed: "&eTüm görevleri tamamladın!"
+
+    not-completed: "&cBu görev henüz tamamlanmadı."
+
+    reward-received: "&a✔ Görev ödülünü aldın!"
+
+    reward-task: "&7Görev: &f{task}"
+
+    reward-amount: "&7Ödül: &6{reward} ⛃"
+
+
+  sell:
+
+    no-fish: "&cSatılacak balık bulunamadı."
+
+    title: "&6&lBalık Pazarı"
+
+    sold-fish: "&7Satılan Balık: &f{amount}"
+
+    earned-money: "&7Kazanılan Para: &6{money} ⛃"

@@ -1,0 +1,759 @@
+# ============================================================
+# Fishera Balıkçılık | Görev Ayarları
+# Developer: Sythel
+# ============================================================
+#
+# Görevler bu dosyadaki sıraya göre ilerler.
+#
+# Bir görevin ödülü alınmadan sonraki göreve geçilmez.
+#
+# ------------------------------------------------------------
+# type
+# ------------------------------------------------------------
+#
+# Görevin türünü belirler.
+#
+# type yazılmazsa otomatik olarak:
+#
+#   CATCH_FISH
+#
+# kabul edilir.
+#
+# ------------------------------------------------------------
+# fish
+# ------------------------------------------------------------
+#
+# Görevin belirli bir balığı istemesini sağlar.
+#
+# fish belirtilmezse yakalanan herhangi bir balık göreve
+# ilerleme kazandırır.
+#
+# Örneğin:
+#
+#   fish: salmon
+#
+# yazılırsa yalnızca "salmon" ID'sine sahip balıklar
+# bu görevin ilerlemesini artırır.
+#
+# ------------------------------------------------------------
+# Görev sırası
+# ------------------------------------------------------------
+#
+# Görevler YAML'da yazıldıkları sırayla oynanır.
+#
+# Bir görev tamamlandığında hemen sonraki göreve geçilmez.
+# Önce mevcut görevin ödülü alınmalıdır.
+#
+# Ödül alındıktan sonra sıradaki görev açılır.
+#
+# ============================================================
+
+tasks:
+
+
+  task_001:
+    name: "&aİlk Adım"
+    description: "&7Herhangi 5 balık yakala."
+    type: CATCH_FISH
+    amount: 5
+    reward: 500
+
+  task_002:
+    name: "&aSabırlı Balıkçı"
+    description: "&7Herhangi 10 balık yakala."
+    type: CATCH_FISH
+    amount: 10
+    reward: 750
+
+  task_003:
+    name: "&aKüçük Başlangıç"
+    description: "&7Herhangi 15 balık yakala."
+    type: CATCH_FISH
+    amount: 15
+    reward: 1000
+
+  task_004:
+    name: "&aSomon Avı"
+    description: "&710 adet Somon yakala."
+    type: CATCH_FISH
+    fish: salmon
+    amount: 10
+    reward: 1250
+
+  task_005:
+    name: "&aTatlı Su"
+    description: "&710 adet Alabalık yakala."
+    type: CATCH_FISH
+    fish: trout
+    amount: 10
+    reward: 1250
+
+  task_006:
+    name: "&aSazan Ustası"
+    description: "&710 adet Sazan yakala."
+    type: CATCH_FISH
+    fish: carp
+    amount: 10
+    reward: 1500
+
+  task_007:
+    name: "&aKıyı Avcısı"
+    description: "&7Herhangi 20 balık yakala."
+    type: CATCH_FISH
+    amount: 20
+    reward: 1500
+
+  task_008:
+    name: "&aSürü Peşinde"
+    description: "&710 adet Sardalya yakala."
+    type: CATCH_FISH
+    fish: sardine
+    amount: 10
+    reward: 1500
+
+  task_009:
+    name: "&aKüçük Avcı"
+    description: "&710 adet Hamsi yakala."
+    type: CATCH_FISH
+    fish: anchovy
+    amount: 10
+    reward: 1500
+
+  task_010:
+    name: "&aGümüş Pullar"
+    description: "&710 adet Gümüş Balığı yakala."
+    type: CATCH_FISH
+    fish: smelt
+    amount: 10
+    reward: 1750
+
+  task_011:
+    name: "&aKefal Sürüsü"
+    description: "&710 adet Kefal yakala."
+    type: CATCH_FISH
+    fish: mullet
+    amount: 10
+    reward: 1750
+
+  task_012:
+    name: "&aHızlı Av"
+    description: "&710 adet Uskumru yakala."
+    type: CATCH_FISH
+    fish: mackerel
+    amount: 10
+    reward: 2000
+
+  task_013:
+    name: "&aYeşil Sular"
+    description: "&710 adet Tilapia yakala."
+    type: CATCH_FISH
+    fish: tilapia
+    amount: 10
+    reward: 2000
+
+  task_014:
+    name: "&aKızılkanat"
+    description: "&710 adet Kızılkanat yakala."
+    type: CATCH_FISH
+    fish: roach
+    amount: 10
+    reward: 2000
+
+  task_015:
+    name: "&aİlk Büyük Av"
+    description: "&7Herhangi 30 balık yakala."
+    type: CATCH_FISH
+    amount: 30
+    reward: 2500
+
+  task_016:
+    name: "&aLevrek Zamanı"
+    description: "&710 adet Deniz Levreği yakala."
+    type: CATCH_FISH
+    fish: bass
+    amount: 10
+    reward: 2500
+
+  task_017:
+    name: "&aGüçlü Yüzücü"
+    description: "&710 adet Ton Balığı yakala."
+    type: CATCH_FISH
+    fish: tuna
+    amount: 10
+    reward: 3000
+
+  task_018:
+    name: "&aDerin Sular"
+    description: "&710 adet Yayın Balığı yakala."
+    type: CATCH_FISH
+    fish: catfish
+    amount: 10
+    reward: 3000
+
+  task_019:
+    name: "&aKuzeyin Avcısı"
+    description: "&710 adet Kuzey Turnası yakala."
+    type: CATCH_FISH
+    fish: pike
+    amount: 10
+    reward: 3250
+
+  task_020:
+    name: "&aDeniz Tabanı"
+    description: "&710 adet Kalkan Balığı yakala."
+    type: CATCH_FISH
+    fish: turbot
+    amount: 10
+    reward: 3500
+
+  task_021:
+    name: "&aÇevik Avcı"
+    description: "&710 adet Baraküda yakala."
+    type: CATCH_FISH
+    fish: barracuda
+    amount: 10
+    reward: 4000
+
+  task_022:
+    name: "&aRenkli Av"
+    description: "&710 adet Gökkuşağı Alabalığı yakala."
+    type: CATCH_FISH
+    fish: rainbow_trout
+    amount: 10
+    reward: 4000
+
+  task_023:
+    name: "&aAltın Çizgi"
+    description: "&710 adet Çipura yakala."
+    type: CATCH_FISH
+    fish: sea_bream
+    amount: 10
+    reward: 4250
+
+  task_024:
+    name: "&aKızıl Av"
+    description: "&710 adet Kızıl Mercan Levreği yakala."
+    type: CATCH_FISH
+    fish: red_snapper
+    amount: 10
+    reward: 4500
+
+  task_025:
+    name: "&aKıyı Ustası"
+    description: "&7Herhangi 50 balık yakala."
+    type: CATCH_FISH
+    amount: 50
+    reward: 5000
+
+
+  task_026:
+    name: "&bDenizlerin Rengi"
+    description: "&715 adet Palyaço Balığı yakala."
+    type: CATCH_FISH
+    fish: clownfish
+    amount: 15
+    reward: 5500
+
+  task_027:
+    name: "&bİkinci Dalga"
+    description: "&7Herhangi 75 balık yakala."
+    type: CATCH_FISH
+    amount: 75
+    reward: 6000
+
+  task_028:
+    name: "&bAltın Pullar"
+    description: "&710 adet Altın Sazan yakala."
+    type: CATCH_FISH
+    fish: golden_carp
+    amount: 10
+    reward: 7000
+
+  task_029:
+    name: "&bKadim Balık"
+    description: "&710 adet Mersin Balığı yakala."
+    type: CATCH_FISH
+    fish: sturgeon
+    amount: 10
+    reward: 7500
+
+  task_030:
+    name: "&bKılıç Gibi"
+    description: "&710 adet Kılıç Balığı yakala."
+    type: CATCH_FISH
+    fish: swordfish
+    amount: 10
+    reward: 8000
+
+  task_031:
+    name: "&bDev Gölgeler"
+    description: "&710 adet Ay Balığı yakala."
+    type: CATCH_FISH
+    fish: sunfish
+    amount: 10
+    reward: 9000
+
+  task_032:
+    name: "&bMavi Av"
+    description: "&710 adet Lüfer yakala."
+    type: CATCH_FISH
+    fish: bluefish
+    amount: 10
+    reward: 7500
+
+  task_033:
+    name: "&bRenkli Resif"
+    description: "&710 adet Papağan Balığı yakala."
+    type: CATCH_FISH
+    fish: parrotfish
+    amount: 10
+    reward: 8500
+
+  task_034:
+    name: "&bDikenlerin Arasında"
+    description: "&710 adet Dikenli Aslan Balığı yakala."
+    type: CATCH_FISH
+    fish: lionfish
+    amount: 10
+    reward: 9000
+
+  task_035:
+    name: "&bKelebek Kanatları"
+    description: "&710 adet Kelebek Balığı yakala."
+    type: CATCH_FISH
+    fish: butterflyfish
+    amount: 10
+    reward: 9500
+
+  task_036:
+    name: "&bAvcıyı Avlamak"
+    description: "&710 adet Tilki Köpekbalığı yakala."
+    type: CATCH_FISH
+    fish: thresher_shark
+    amount: 10
+    reward: 10000
+
+  task_037:
+    name: "&bTropik Av"
+    description: "&710 adet Mahi Mahi yakala."
+    type: CATCH_FISH
+    fish: mahi_mahi
+    amount: 10
+    reward: 11000
+
+  task_038:
+    name: "&bDeniz Gezginleri"
+    description: "&7Herhangi 100 balık yakala."
+    type: CATCH_FISH
+    amount: 100
+    reward: 10000
+
+  task_039:
+    name: "&bGüçlü Akıntı"
+    description: "&720 adet Ton Balığı yakala."
+    type: CATCH_FISH
+    fish: tuna
+    amount: 20
+    reward: 12000
+
+  task_040:
+    name: "&bDerinliklerin Sesi"
+    description: "&720 adet Yayın Balığı yakala."
+    type: CATCH_FISH
+    fish: catfish
+    amount: 20
+    reward: 12500
+
+  task_041:
+    name: "&bKuzey Seferi"
+    description: "&720 adet Kuzey Turnası yakala."
+    type: CATCH_FISH
+    fish: pike
+    amount: 20
+    reward: 13500
+
+  task_042:
+    name: "&bMercan Avcısı"
+    description: "&715 adet Kızıl Mercan Levreği yakala."
+    type: CATCH_FISH
+    fish: red_snapper
+    amount: 15
+    reward: 14000
+
+  task_043:
+    name: "&bAltın Peşinde"
+    description: "&715 adet Altın Sazan yakala."
+    type: CATCH_FISH
+    fish: golden_carp
+    amount: 15
+    reward: 15000
+
+  task_044:
+    name: "&bDev Balıkçı"
+    description: "&7Herhangi 150 balık yakala."
+    type: CATCH_FISH
+    amount: 150
+    reward: 16000
+
+  task_045:
+    name: "&bKılıçların Dansı"
+    description: "&715 adet Kılıç Balığı yakala."
+    type: CATCH_FISH
+    fish: swordfish
+    amount: 15
+    reward: 17000
+
+  task_046:
+    name: "&bAyın Gölgesi"
+    description: "&715 adet Ay Balığı yakala."
+    type: CATCH_FISH
+    fish: sunfish
+    amount: 15
+    reward: 18000
+
+  task_047:
+    name: "&bMavi Fırtına"
+    description: "&715 adet Lüfer yakala."
+    type: CATCH_FISH
+    fish: bluefish
+    amount: 15
+    reward: 17500
+
+  task_048:
+    name: "&bResiflerin Efendisi"
+    description: "&715 adet Papağan Balığı yakala."
+    type: CATCH_FISH
+    fish: parrotfish
+    amount: 15
+    reward: 19000
+
+  task_049:
+    name: "&bDerin Avcı"
+    description: "&715 adet Tilki Köpekbalığı yakala."
+    type: CATCH_FISH
+    fish: thresher_shark
+    amount: 15
+    reward: 21000
+
+  task_050:
+    name: "&bOrta Suların Ustası"
+    description: "&7Herhangi 200 balık yakala."
+    type: CATCH_FISH
+    amount: 200
+    reward: 25000
+
+
+  task_051:
+    name: "&6Büyük Av"
+    description: "&7Herhangi 250 balık yakala."
+    type: CATCH_FISH
+    amount: 250
+    reward: 30000
+
+  task_052:
+    name: "&6Altın Sular"
+    description: "&725 adet Altın Sazan yakala."
+    type: CATCH_FISH
+    fish: golden_carp
+    amount: 25
+    reward: 32000
+
+  task_053:
+    name: "&6Kadim Dev"
+    description: "&725 adet Mersin Balığı yakala."
+    type: CATCH_FISH
+    fish: sturgeon
+    amount: 25
+    reward: 35000
+
+  task_054:
+    name: "&6Okyanus Kılıcı"
+    description: "&725 adet Kılıç Balığı yakala."
+    type: CATCH_FISH
+    fish: swordfish
+    amount: 25
+    reward: 38000
+
+  task_055:
+    name: "&6Ayın Efendisi"
+    description: "&720 adet Ay Balığı yakala."
+    type: CATCH_FISH
+    fish: sunfish
+    amount: 20
+    reward: 40000
+
+  task_056:
+    name: "&6Mavi Avcı"
+    description: "&725 adet Lüfer yakala."
+    type: CATCH_FISH
+    fish: bluefish
+    amount: 25
+    reward: 38000
+
+  task_057:
+    name: "&6Zehirli Güzellik"
+    description: "&725 adet Dikenli Aslan Balığı yakala."
+    type: CATCH_FISH
+    fish: lionfish
+    amount: 25
+    reward: 42000
+
+  task_058:
+    name: "&6Sessiz Kanatlar"
+    description: "&725 adet Kelebek Balığı yakala."
+    type: CATCH_FISH
+    fish: butterflyfish
+    amount: 25
+    reward: 43000
+
+  task_059:
+    name: "&6Derinlerin Kuyruğu"
+    description: "&720 adet Tilki Köpekbalığı yakala."
+    type: CATCH_FISH
+    fish: thresher_shark
+    amount: 20
+    reward: 45000
+
+  task_060:
+    name: "&6Tropik Usta"
+    description: "&725 adet Mahi Mahi yakala."
+    type: CATCH_FISH
+    fish: mahi_mahi
+    amount: 25
+    reward: 50000
+
+  task_061:
+    name: "&6Karanlığın Feneri"
+    description: "&715 adet Fener Balığı yakala."
+    type: CATCH_FISH
+    fish: anglerfish
+    amount: 15
+    reward: 55000
+
+  task_062:
+    name: "&6Elektrik Akımı"
+    description: "&715 adet Elektrikli Yılan Balığı yakala."
+    type: CATCH_FISH
+    fish: electric_eel
+    amount: 15
+    reward: 60000
+
+  task_063:
+    name: "&6Nehir Devi"
+    description: "&710 adet Arapaima yakala."
+    type: CATCH_FISH
+    fish: arapaima
+    amount: 10
+    reward: 65000
+
+  task_064:
+    name: "&6Kadim Kürek"
+    description: "&710 adet Kürek Balığı yakala."
+    type: CATCH_FISH
+    fish: oarfish
+    amount: 10
+    reward: 70000
+
+  task_065:
+    name: "&6Napolyon'un Avı"
+    description: "&710 adet Napolyon Balığı yakala."
+    type: CATCH_FISH
+    fish: napoleon_wrasse
+    amount: 10
+    reward: 75000
+
+  task_066:
+    name: "&6Nehir Canavarı"
+    description: "&710 adet Avrupa Yayın Balığı yakala."
+    type: CATCH_FISH
+    fish: wels_catfish
+    amount: 10
+    reward: 80000
+
+  task_067:
+    name: "&6Sıçrayan Dev"
+    description: "&710 adet Tarpon yakala."
+    type: CATCH_FISH
+    fish: tarpon
+    amount: 10
+    reward: 85000
+
+  task_068:
+    name: "&6Yelkenlerin Gücü"
+    description: "&710 adet Yelken Balığı yakala."
+    type: CATCH_FISH
+    fish: sailfish
+    amount: 10
+    reward: 90000
+
+  task_069:
+    name: "&6Okyanus Devi"
+    description: "&75 adet Dev Orkinos yakala."
+    type: CATCH_FISH
+    fish: atlantic_bluefin
+    amount: 5
+    reward: 100000
+
+  task_070:
+    name: "&6Fırtınanın Dişleri"
+    description: "&75 adet Boğa Köpekbalığı yakala."
+    type: CATCH_FISH
+    fish: bull_shark
+    amount: 5
+    reward: 110000
+
+
+  task_071:
+    name: "&cBitmeyen Av"
+    description: "&7Herhangi 350 balık yakala."
+    type: CATCH_FISH
+    amount: 350
+    reward: 125000
+
+  task_072:
+    name: "&cDerinliklerin Feneri"
+    description: "&725 adet Fener Balığı yakala."
+    type: CATCH_FISH
+    fish: anglerfish
+    amount: 25
+    reward: 130000
+
+  task_073:
+    name: "&cElektrik Ustası"
+    description: "&725 adet Elektrikli Yılan Balığı yakala."
+    type: CATCH_FISH
+    fish: electric_eel
+    amount: 25
+    reward: 135000
+
+  task_074:
+    name: "&cTatlı Suların Devi"
+    description: "&720 adet Arapaima yakala."
+    type: CATCH_FISH
+    fish: arapaima
+    amount: 20
+    reward: 150000
+
+  task_075:
+    name: "&cDenizin Yılanı"
+    description: "&720 adet Kürek Balığı yakala."
+    type: CATCH_FISH
+    fish: oarfish
+    amount: 20
+    reward: 160000
+
+  task_076:
+    name: "&cMercanların Kralı"
+    description: "&720 adet Napolyon Balığı yakala."
+    type: CATCH_FISH
+    fish: napoleon_wrasse
+    amount: 20
+    reward: 170000
+
+  task_077:
+    name: "&cNehirlerin Hükümdarı"
+    description: "&720 adet Avrupa Yayın Balığı yakala."
+    type: CATCH_FISH
+    fish: wels_catfish
+    amount: 20
+    reward: 180000
+
+  task_078:
+    name: "&cGümüş Sıçrayış"
+    description: "&720 adet Tarpon yakala."
+    type: CATCH_FISH
+    fish: tarpon
+    amount: 20
+    reward: 190000
+
+  task_079:
+    name: "&cRüzgarın Balığı"
+    description: "&720 adet Yelken Balığı yakala."
+    type: CATCH_FISH
+    fish: sailfish
+    amount: 20
+    reward: 200000
+
+  task_080:
+    name: "&cMavi Dev"
+    description: "&710 adet Dev Orkinos yakala."
+    type: CATCH_FISH
+    fish: atlantic_bluefin
+    amount: 10
+    reward: 225000
+
+  task_081:
+    name: "&cKöpekbalığı Avcısı"
+    description: "&710 adet Boğa Köpekbalığı yakala."
+    type: CATCH_FISH
+    fish: bull_shark
+    amount: 10
+    reward: 250000
+
+  task_082:
+    name: "&cYaşayan Fosil"
+    description: "&73 adet Latimeria yakala."
+    type: CATCH_FISH
+    fish: coelacanth
+    amount: 3
+    reward: 300000
+
+  task_083:
+    name: "&cDerinliğin Canavarı"
+    description: "&73 adet Kobold Köpekbalığı yakala."
+    type: CATCH_FISH
+    fish: goblin_shark
+    amount: 3
+    reward: 350000
+
+  task_084:
+    name: "&cSoğuk Okyanusun Hükümdarı"
+    description: "&73 adet Grenland Köpekbalığı yakala."
+    type: CATCH_FISH
+    fish: greenland_shark
+    amount: 3
+    reward: 400000
+
+  task_085:
+    name: "&cMavi Marlin"
+    description: "&73 adet Mavi Marlin yakala."
+    type: CATCH_FISH
+    fish: blue_marlin
+    amount: 3
+    reward: 450000
+
+  task_086:
+    name: "&cGolyat"
+    description: "&73 adet Golyat Orfozu yakala."
+    type: CATCH_FISH
+    fish: goliath_grouper
+    amount: 3
+    reward: 500000
+
+  task_087:
+    name: "&cBüyük Sefer"
+    description: "&7Herhangi 500 balık yakala."
+    type: CATCH_FISH
+    amount: 500
+    reward: 400000
+
+  task_088:
+    name: "&cOkyanusun Laneti"
+    description: "&7Herhangi 750 balık yakala."
+    type: CATCH_FISH
+    amount: 750
+    reward: 600000
+
+  task_089:
+    name: "&cEfsanelerin Ötesinde"
+    description: "&7Herhangi 1000 balık yakala."
+    type: CATCH_FISH
+    amount: 1000
+    reward: 800000
+
+  task_090:
+    name: "&6&lFishera'nın Son Sınavı"
+    description: "&7Herhangi 1500 balık yakala."
+    type: CATCH_FISH
+    amount: 1500
+    reward: 1500000

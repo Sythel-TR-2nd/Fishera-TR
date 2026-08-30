@@ -1,0 +1,35 @@
+common:
+  name: "&#8BC34AYaygın"
+  color: "#8BC34A"
+  description:
+    - "&7En sık karşılaşılan balık türleri."
+    - "&7Başlangıç seviyesi için idealdir."
+
+uncommon:
+  name: "&#00BCD4Sıradışı"
+  color: "#00BCD4"
+  description:
+    - "&7Yaygın balıklardan daha az bulunur."
+    - "&7Biraz daha değerlidir."
+
+rare:
+  name: "&#2196F3Nadir"
+  color: "#2196F3"
+  description:
+    - "&7Bulması daha zordur."
+    - "&7Şanslı balıkçılar yakalayabilir."
+
+epic:
+  name: "&#9C27B0Epik"
+  color: "#9C27B0"
+  description:
+    - "&7Oldukça değerli balıklar."
+    - "&7Usta balıkçıların hedefidir."
+
+legendary:
+  name: "&#FF9800Efsanevi"
+  color: "#FF9800"
+  description:
+    - "&6Çok nadir bulunur."
+    - "&6Yakalamak büyük şans ister."
+
