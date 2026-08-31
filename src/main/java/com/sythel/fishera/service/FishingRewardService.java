@@ -8,6 +8,7 @@ import com.sythel.fishera.registry.BaitRegistry;
 import com.sythel.fishera.registry.RodRegistry;
 import com.sythel.fishera.repository.FishRepository;
 import com.sythel.fishera.rod.RodData;
+import com.sythel.fishera.util.ColorUtil;
 import com.sythel.fishera.util.ItemUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -294,13 +295,15 @@ public class FishingRewardService {
         lore.add("");
 
         lore.add(
-                "§7Yem: "
-                        + bait.getName()
-                        + " &8("
-                        + amount
-                        + "/"
-                        + bait.getMaxAmount()
-                        + ")"
+                ColorUtil.color(
+                        "&7Yem: "
+                                + bait.getName()
+                                + " &8("
+                                + amount
+                                + "/"
+                                + bait.getMaxAmount()
+                                + ")"
+                )
         );
 
         if (bait.getWeight() != 0) {
