@@ -6,7 +6,10 @@ import com.sythel.fishera.builder.RodItemBuilder;
 import com.sythel.fishera.config.ConfigManager;
 import com.sythel.fishera.service.MessageService;
 import com.sythel.fishera.top.TopListService;
+import com.sythel.fishera.update.UpdateChecker;
+import com.sythel.fishera.update.UpdateListener;
 import com.sythel.fishera.world.WorldManager;
+import org.bukkit.Bukkit;
 
 public class PluginInitializer {
 
@@ -165,6 +168,21 @@ public class PluginInitializer {
                 registrySetup.getBaitLoader(),
                 registrySetup.getTaskLoader(),
                 serviceSetup.getTaskService()
+        );
+
+        UpdateChecker updateChecker =
+                new UpdateChecker(
+                        plugin
+                );
+
+        updateChecker.check();
+
+        Bukkit.getPluginManager().registerEvents(
+                new UpdateListener(
+                        plugin,
+                        updateChecker
+                ),
+                plugin
         );
     }
 
