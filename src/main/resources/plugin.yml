@@ -1,5 +1,5 @@
 name: Fishera
-version: 1.0.0-beta.1
+version: 1.0.0-beta.2
 main: com.sythel.fishera.Fishera
 api-version: '1.21'
 
