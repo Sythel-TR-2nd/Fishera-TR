@@ -1,0 +1,119 @@
+# Fishera Balıkçılık Etkinliği Ayarları
+
+duration: 15 # Etkinlik kaç dakika süreceği 
+# Komutla veya otomatik planlamayla başlatılırsa aynı süreyi baz alır.
+
+schedule:
+
+  # Otomatik etkinlik başlatma
+  enabled: false # Her gün aktif olsun isteniyorsa true yapılmalı.
+
+  # Her gün etkinliğin başlayacağı saat
+  # Sunucunun yerel saatine göre çalışır.
+  time: "20:00"
+
+
+# Etkinlik ödülleri
+rewards:
+
+  # Etkinlik boyunca en çok balık yakalayanlar
+  most-fish:
+
+    # 1. sıra
+    1: 5000
+
+    # 2. sıra
+    2: 3000
+
+    # 3. sıra
+    3: 1500
+
+  # Etkinlik boyunca yakalanan en ağır balıklar
+  heaviest-fish:
+
+    # 1. sıra
+    1: 5000
+
+    # 2. sıra
+    2: 3000
+
+    # 3. sıra
+    3: 1500
+
+
+# Etkinlik kategori isimleri
+categories:
+
+  # En çok balık kategorisi
+  most-fish: "&eEn Çok Balık"
+
+  # En ağır balık kategorisi
+  heaviest-fish: "&eEn Ağır Balık"
+
+
+# Etkinlik mesajları
+messages:
+
+  # Etkinlik başladığında gönderilecek mesajlar
+  start:
+
+    - ""
+    - "&6&lFishera &8» &eBalıkçılık etkinliği başladı!"
+    - "&7Etkinlik süresi: &f{duration} dakika"
+    - ""
+
+  # Etkinlik sona erdiğinde gönderilecek mesajlar
+  finish:
+
+    - ""
+    - "&6&lFishera &8» &eBalıkçılık etkinliği sona erdi!"
+    - ""
+
+  # Dereceye giren oyuncular için herkese gönderilecek mesaj
+  #
+  # Kullanılabilir değişkenler:
+  # {place}   = derece
+  # {player}  = oyuncu adı
+  # {value}   = değer
+  # {unit}    = birim
+  # {reward}  = ödül
+  winner-broadcast: "&6{place}. &f{player} &7({value} {unit}) &a+{reward} para"
+
+  # Dereceye giren oyuncuya özel mesajlar
+  winner-player:
+
+    # Kullanılabilir değişkenler:
+    # {category} = kategori adı
+    # {place}    = derece
+    rank: "&6&lFishera &8» &a{category} kategorisinde {place}. oldun!"
+
+    # Kullanılabilir değişkenler:
+    # {reward} = kazanılan para
+    reward: "&7Kazancın: &e{reward} para"
+
+
+  # Konsol mesajları
+  log:
+
+    # Etkinlik zamanlaması oluşturulduğunda
+    # Kullanılabilir değişken:
+    # {time} = planlanan saat
+    scheduled: "Balıkçılık etkinliği günlük olarak {time} saatine planlandı."
+
+    # Etkinlik sona erdiğinde
+    finished: "Fishera balıkçılık etkinliği sona erdi."
+
+    # Etkinlik boyunca yarışmaya katılan oyuncu sayısı
+    # Kullanılabilir değişken:
+    # {players} = oyuncu sayısı
+    most-fish: "En çok balık kategorisi: {players} oyuncu."
+
+    # En ağır balık yarışmasındaki derece sayısı
+    # Kullanılabilir değişken:
+    # {players} = sonuç sayısı
+    heaviest-fish: "En ağır balık kategorisi: {players} derece."
+
+    # UUID hatası
+    # Kullanılabilir değişken:
+    # {uuid} = geçersiz UUID
+    invalid-uuid: "Geçersiz oyuncu UUID'si: {uuid}"
