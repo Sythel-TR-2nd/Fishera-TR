@@ -32,6 +32,9 @@ public class ConfigManager {
     private File guiFile;
     private FileConfiguration guiConfig;
 
+    private File eventFile;
+    private FileConfiguration eventConfig;
+
     public ConfigManager(JavaPlugin plugin) {
 
         this.plugin = plugin;
@@ -45,6 +48,7 @@ public class ConfigManager {
         loadBaitConfig();
         loadMessagesConfig();
         loadGuiConfig();
+        loadEventConfig();
 
     }
 
@@ -216,6 +220,30 @@ public class ConfigManager {
 
     }
 
+    private void loadEventConfig() {
+
+        eventFile =
+                new File(
+                        plugin.getDataFolder(),
+                        "event.yml"
+                );
+
+        if (!eventFile.exists()) {
+
+            plugin.saveResource(
+                    "event.yml",
+                    false
+            );
+
+        }
+
+        eventConfig =
+                YamlConfiguration.loadConfiguration(
+                        eventFile
+                );
+
+    }
+
     public List<String> getEnabledWorlds() {
 
         return plugin.getConfig()
@@ -267,6 +295,12 @@ public class ConfigManager {
 
     }
 
+    public FileConfiguration getEventConfig() {
+
+        return eventConfig;
+
+    }
+
     public void reload() {
 
         plugin.reloadConfig();
@@ -278,6 +312,7 @@ public class ConfigManager {
         loadBaitConfig();
         loadMessagesConfig();
         loadGuiConfig();
+        loadEventConfig();
 
     }
 
