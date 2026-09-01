@@ -4,6 +4,7 @@ import com.sythel.fishera.Fishera;
 import com.sythel.fishera.builder.BaitItemBuilder;
 import com.sythel.fishera.builder.RodItemBuilder;
 import com.sythel.fishera.config.ConfigManager;
+import com.sythel.fishera.service.EventService;
 import com.sythel.fishera.service.MessageService;
 import com.sythel.fishera.top.TopListService;
 import com.sythel.fishera.update.UpdateChecker;
@@ -78,6 +79,16 @@ public class PluginInitializer {
                 );
 
         serviceSetup.initialize();
+
+        EventService eventService =
+                new EventService(
+                        plugin,
+                        configManager,
+                        repositorySetup.getFishRepository(),
+                        serviceSetup.getEconomyService()
+                );
+
+        eventService.startSchedule();
 
         TopListService topListService =
                 new TopListService(
@@ -167,7 +178,8 @@ public class PluginInitializer {
                 registrySetup.getRodLoader(),
                 registrySetup.getBaitLoader(),
                 registrySetup.getTaskLoader(),
-                serviceSetup.getTaskService()
+                serviceSetup.getTaskService(),
+                eventService
         );
 
         UpdateChecker updateChecker =
