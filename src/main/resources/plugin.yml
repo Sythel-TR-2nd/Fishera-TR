@@ -1,5 +1,5 @@
 name: Fishera
-version: 1.0.0-beta.2
+version: 1.0.0-beta.3
 main: com.sythel.fishera.Fishera
 api-version: '1.21'
 
@@ -27,8 +27,13 @@ permissions:
     description: Fishera Balıkçılık yapılandırma dosyalarını yeniden yükleme yetkisi verir.
     default: op
 
+  fishera.event:
+    description: Fishera Balıkçılık etkinliğini yönetme yetkisi verir.
+    default: op
+
   fishera.admin:
     description: Tüm Fishera Balıkçılık yönetici komutlarına erişim sağlar.
     default: op
     children:
       fishera.reload: true
+      fishera.event: true
