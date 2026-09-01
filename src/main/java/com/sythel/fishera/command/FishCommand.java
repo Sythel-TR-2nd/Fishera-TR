@@ -12,6 +12,7 @@ import com.sythel.fishera.registry.BaitRegistry;
 import com.sythel.fishera.registry.FishRegistry;
 import com.sythel.fishera.registry.RarityRegistry;
 import com.sythel.fishera.registry.RodRegistry;
+import com.sythel.fishera.service.EventService;
 import com.sythel.fishera.service.TaskService;
 import com.sythel.fishera.task.TaskData;
 import org.bukkit.command.Command;
@@ -52,6 +53,8 @@ public class FishCommand implements CommandExecutor {
 
     private final TaskService taskService;
 
+    private final EventService eventService;
+
     public FishCommand(
             MainMenu mainMenu,
             ConfigManager configManager,
@@ -64,7 +67,8 @@ public class FishCommand implements CommandExecutor {
             RodLoader rodLoader,
             BaitLoader baitLoader,
             TaskLoader taskLoader,
-            TaskService taskService) {
+            TaskService taskService,
+            EventService eventService) {
 
         this.mainMenu = mainMenu;
 
@@ -89,6 +93,8 @@ public class FishCommand implements CommandExecutor {
         this.taskLoader = taskLoader;
 
         this.taskService = taskService;
+
+        this.eventService = eventService;
 
     }
 
@@ -146,6 +152,17 @@ public class FishCommand implements CommandExecutor {
 
         }
 
+        if (args[0].equalsIgnoreCase("event")) {
+
+            handleEventCommand(
+                    sender,
+                    args
+            );
+
+            return true;
+
+        }
+
         SubCommand subCommand =
                 subCommands.get(
                         args[0].toLowerCase()
@@ -180,11 +197,128 @@ public class FishCommand implements CommandExecutor {
 
     }
 
+    private void handleEventCommand(
+            CommandSender sender,
+            String[] args) {
+
+        if (!sender.hasPermission(
+                "fishera.event")) {
+
+            sender.sendMessage(
+                    "§cBu komutu kullanmak için yetkin yok."
+            );
+
+            return;
+
+        }
+
+        if (args.length < 2) {
+
+            sender.sendMessage(
+                    "§eKullanım: /fish event <start|stop|status>"
+            );
+
+            return;
+
+        }
+
+        String action =
+                args[1].toLowerCase();
+
+        switch (action) {
+
+            case "start":
+
+                if (eventService.start()) {
+
+                    sender.sendMessage(
+                            "§a✔ Balıkçılık etkinliği başlatıldı."
+                    );
+
+                } else {
+
+                    sender.sendMessage(
+                            "§c✘ Etkinlik başlatılamadı. Zaten aktif olabilir veya etkinlik süresi geçersiz."
+                    );
+
+                }
+
+                break;
+
+            case "stop":
+
+                if (eventService.stop()) {
+
+                    sender.sendMessage(
+                            "§a✔ Balıkçılık etkinliği sona erdirildi."
+                    );
+
+                } else {
+
+                    sender.sendMessage(
+                            "§c✘ Aktif bir balıkçılık etkinliği bulunmuyor."
+                    );
+
+                }
+
+                break;
+
+            case "status":
+
+                if (!eventService.isActive()) {
+
+                    sender.sendMessage(
+                            "§7Şu anda aktif bir balıkçılık etkinliği bulunmuyor."
+                    );
+
+                    return;
+
+                }
+
+                long remaining =
+                        eventService.getEndTime()
+                                - System.currentTimeMillis();
+
+                if (remaining < 0) {
+                    remaining = 0;
+                }
+
+                long minutes =
+                        remaining / 60000L;
+
+                long seconds =
+                        (remaining % 60000L) / 1000L;
+
+                sender.sendMessage(
+                        "§a✔ Balıkçılık etkinliği aktif."
+                );
+
+                sender.sendMessage(
+                        "§7Kalan süre: §f"
+                                + minutes
+                                + " dakika "
+                                + seconds
+                                + " saniye"
+                );
+
+                break;
+
+            default:
+
+                sender.sendMessage(
+                        "§eKullanım: /fish event <start|stop|status>"
+                );
+
+                break;
+
+        }
+
+    }
+
     private void reload(
             CommandSender sender) {
 
         try {
-
 
             configManager.reload();
 
@@ -195,7 +329,6 @@ public class FishCommand implements CommandExecutor {
             rodRegistry.clear();
 
             baitRegistry.clear();
-
 
             fishLoader.load(
                     configManager.getFishConfig()
@@ -230,6 +363,9 @@ public class FishCommand implements CommandExecutor {
             taskService.reloadTasks(
                     tasks
             );
+
+
+            eventService.startSchedule();
 
             sender.sendMessage("");
 
