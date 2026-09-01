@@ -15,6 +15,7 @@ import com.sythel.fishera.registry.BaitRegistry;
 import com.sythel.fishera.registry.FishRegistry;
 import com.sythel.fishera.registry.RarityRegistry;
 import com.sythel.fishera.registry.RodRegistry;
+import com.sythel.fishera.service.EventService;
 import com.sythel.fishera.service.TaskService;
 
 public class CommandSetup {
@@ -38,7 +39,8 @@ public class CommandSetup {
             RodLoader rodLoader,
             BaitLoader baitLoader,
             TaskLoader taskLoader,
-            TaskService taskService) {
+            TaskService taskService,
+            EventService eventService) {
 
         FishCommand fishCommand =
                 new FishCommand(
@@ -53,7 +55,8 @@ public class CommandSetup {
                         rodLoader,
                         baitLoader,
                         taskLoader,
-                        taskService
+                        taskService,
+                        eventService
                 );
 
         fishCommand.register(
