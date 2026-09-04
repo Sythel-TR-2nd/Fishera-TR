@@ -1,0 +1,191 @@
+simulation:
+
+  title: "&#4FC3F7Fishera • Ekonomi Simülasyonu"
+
+  background:
+    material: "BLACK_STAINED_GLASS_PANE"
+    name: " "
+
+  buttons:
+
+    rod:
+      material: "FISHING_ROD"
+      name: "&#4FC3F7 Olta"
+      lore:
+        - ""
+        - "&7Simülasyonda kullanılacak oltayı seç."
+        - ""
+        - "&fSeçili: &e%rod%"
+        - ""
+        - "&eTıklayarak değiştir."
+
+    bait:
+      material: "WHEAT_SEEDS"
+      name: "&#9CCC65🪱 Yem"
+      lore:
+        - ""
+        - "&7Simülasyonda kullanılacak yemi seç."
+        - ""
+        - "&fSeçili: &e%bait%"
+        - ""
+        - "&eTıklayarak değiştir."
+
+    duration:
+      material: "CLOCK"
+      name: "&#FFB74D Simülasyon Süresi"
+      lore:
+        - ""
+        - "&7Hesaplama süresini belirle."
+        - ""
+        - "&fSeçili: &e%duration%"
+        - ""
+        - "&eTıklayarak değiştir."
+
+    simulate:
+      material: "EMERALD"
+      name: "&#66BB6A Simülasyonu Hesapla"
+      lore:
+        - ""
+        - "&7Seçili olta ve yem ile"
+        - "&7beklenen ekonomik getiriyi hesapla."
+        - ""
+        - "&fOlta: &e%rod%"
+        - "&fYem: &e%bait%"
+        - "&fSüre: &e%duration%"
+        - ""
+        - "&a▶ Hesaplamak için tıkla."
+
+    compare:
+      material: "GOLD_INGOT"
+      name: "&#FFD54F Oltaları Karşılaştır"
+      lore:
+        - ""
+        - "&7Seçili yem ile tüm oltaları"
+        - "&7ekonomik açıdan karşılaştır."
+        - ""
+        - "&fYem: &e%bait%"
+        - "&fSüre: &e%duration%"
+        - ""
+        - "&e▶ Karşılaştırmak için tıkla."
+
+    back:
+      material: "BARRIER"
+      name: "&c✕ Kapat"
+      lore:
+        - "&7Simülasyon menüsünü kapat."
+
+  result:
+
+    material: "BOOK"
+    name: "&#4FC3F7 Simülasyon Sonucu"
+
+    lore:
+      - ""
+      - "&7Süre: &f%duration%"
+      - "&7Olta: &f%rod%"
+      - "&7Yem: &f%bait%"
+      - ""
+      - "&bYakalanan Balık: &f%fish%"
+      - "&7Saatlik Yakalama: &f%fish-per-hour%"
+      - ""
+      - "&7Ortalama Balık Değeri: &6%average-value% ⛃"
+      - "&7Brüt Gelir: &6%gross% ⛃"
+      - "&7Yem Maliyeti: &c-%bait-cost% ⛃"
+      - "&aNet Gelir: &6%net% ⛃"
+      - ""
+      - "&8%success-assumption%"
+
+  comparison:
+
+    title: "&#FFD54FFishera • Olta Karşılaştırması"
+
+    entry:
+      material: "FISHING_ROD"
+      name: "&6#%place% &f%rod%"
+      lore:
+        - ""
+        - "&7Yakalama: &f%fish-per-hour% / saat"
+        - "&7Ortalama Balık Değeri: &6%average-value% ⛃"
+        - ""
+        - "&7Brüt Gelir: &6%gross% ⛃"
+        - "&7Yem Maliyeti: &c-%bait-cost% ⛃"
+        - "&aNet: &6%net% ⛃"
+
+    empty:
+      material: "BARRIER"
+      name: "&cKarşılaştırılacak olta yok."
+      lore:
+        - ""
+        - "&7Kayıtlı herhangi bir olta bulunamadı."
+
+  duration:
+
+    title: "&#4FC3F7Fishera • Simülasyon Süresi"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    entry:
+      material: "CLOCK"
+      name: "&e%duration%"
+      lore:
+        - ""
+        - "&7Bu süre üzerinden"
+        - "&7ekonomik hesaplama yapılır."
+        - ""
+        - "&eSeçmek için tıkla."
+
+    back:
+      material: "ARROW"
+      name: "&e◀ Geri"
+      lore:
+        - "&7Simülasyon menüsüne dön."
+
+  selection:
+
+    title: "&#4FC3F7Fishera • %type% Seçimi"
+
+    background:
+      material: "BLACK_STAINED_GLASS_PANE"
+      name: " "
+
+    selected:
+      suffix: " &a✔"
+
+    back:
+      material: "ARROW"
+      name: "&e◀ Geri"
+      lore:
+        - "&7Simülasyon menüsüne dön."
+
+  messages:
+
+    no-rod:
+      - "&cSimülasyon için bir olta seçmelisin."
+
+    calculation-started:
+      - "&7Ekonomi simülasyonu hesaplanıyor..."
+
+    calculation-completed:
+      - "&aSimülasyon tamamlandı."
+
+    comparison-completed:
+      - "&aOlta karşılaştırması tamamlandı."
+
+    no-bait:
+      - "&7Yem seçilmedi. Yem maliyeti &f0 ⛃ &7olarak hesaplanacak."
+
+  settings:
+
+    default-duration: 3600
+
+    success-assumption: "%100 başarılı minigame varsayımı"
+
+    duration-options:
+      - 300
+      - 600
+      - 1800
+      - 3600
+      - 7200
+      - 10800
