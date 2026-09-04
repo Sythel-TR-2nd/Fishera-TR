@@ -2,6 +2,7 @@ package com.sythel.fishera.bootstrap;
 
 import com.sythel.fishera.Fishera;
 import com.sythel.fishera.command.FishCommand;
+import com.sythel.fishera.command.SimulationSubCommand;
 import com.sythel.fishera.command.subcommand.CollectionSubCommand;
 import com.sythel.fishera.collection.CollectionMenu;
 import com.sythel.fishera.config.ConfigManager;
@@ -17,6 +18,7 @@ import com.sythel.fishera.registry.RarityRegistry;
 import com.sythel.fishera.registry.RodRegistry;
 import com.sythel.fishera.service.EventService;
 import com.sythel.fishera.service.TaskService;
+import com.sythel.fishera.simulation.SimulationMenu;
 
 public class CommandSetup {
 
@@ -29,6 +31,7 @@ public class CommandSetup {
     public void initialize(
             MainMenu mainMenu,
             CollectionMenu collectionMenu,
+            SimulationMenu simulationMenu,
             ConfigManager configManager,
             FishRegistry fishRegistry,
             RarityRegistry rarityRegistry,
@@ -62,6 +65,12 @@ public class CommandSetup {
         fishCommand.register(
                 new CollectionSubCommand(
                         collectionMenu
+                )
+        );
+
+        fishCommand.register(
+                new SimulationSubCommand(
+                        simulationMenu
                 )
         );
 
