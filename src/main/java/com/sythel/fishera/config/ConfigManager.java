@@ -35,6 +35,9 @@ public class ConfigManager {
     private File eventFile;
     private FileConfiguration eventConfig;
 
+    private File simulationFile;
+    private FileConfiguration simulationConfig;
+
     public ConfigManager(JavaPlugin plugin) {
 
         this.plugin = plugin;
@@ -49,6 +52,7 @@ public class ConfigManager {
         loadMessagesConfig();
         loadGuiConfig();
         loadEventConfig();
+        loadSimulationConfig();
 
     }
 
@@ -244,6 +248,30 @@ public class ConfigManager {
 
     }
 
+    private void loadSimulationConfig() {
+
+        simulationFile =
+                new File(
+                        plugin.getDataFolder(),
+                        "simulation.yml"
+                );
+
+        if (!simulationFile.exists()) {
+
+            plugin.saveResource(
+                    "simulation.yml",
+                    false
+            );
+
+        }
+
+        simulationConfig =
+                YamlConfiguration.loadConfiguration(
+                        simulationFile
+                );
+
+    }
+
     public List<String> getEnabledWorlds() {
 
         return plugin.getConfig()
@@ -301,6 +329,12 @@ public class ConfigManager {
 
     }
 
+    public FileConfiguration getSimulationConfig() {
+
+        return simulationConfig;
+
+    }
+
     public void reload() {
 
         plugin.reloadConfig();
@@ -313,6 +347,7 @@ public class ConfigManager {
         loadMessagesConfig();
         loadGuiConfig();
         loadEventConfig();
+        loadSimulationConfig();
 
     }
 
