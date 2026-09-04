@@ -22,7 +22,6 @@ public class PluginInitializer {
             Fishera plugin) {
 
         this.plugin = plugin;
-
     }
 
     public void initialize() {
@@ -67,6 +66,7 @@ public class PluginInitializer {
         ServiceSetup serviceSetup =
                 new ServiceSetup(
                         plugin,
+                        configManager,
                         registrySetup.getFishRegistry(),
                         registrySetup.getRarityRegistry(),
                         registrySetup.getRodRegistry(),
@@ -89,6 +89,15 @@ public class PluginInitializer {
                 );
 
         eventService.startSchedule();
+
+        SimulationSetup simulationSetup =
+                new SimulationSetup(
+                        plugin,
+                        serviceSetup.getEconomySimulationService(),
+                        serviceSetup.getSimulationConfig()
+                );
+
+        simulationSetup.initialize();
 
         TopListService topListService =
                 new TopListService(
@@ -168,6 +177,7 @@ public class PluginInitializer {
         commandSetup.initialize(
                 menuSetup.getMainMenu(),
                 menuSetup.getCollectionMenu(),
+                simulationSetup.getSimulationMenu(),
                 configManager,
                 registrySetup.getFishRegistry(),
                 registrySetup.getRarityRegistry(),
@@ -201,11 +211,7 @@ public class PluginInitializer {
     public void shutdown() {
 
         if (databaseSetup != null) {
-
             databaseSetup.shutdown();
-
         }
-
     }
-
 }
