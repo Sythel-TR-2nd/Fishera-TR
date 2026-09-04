@@ -3,6 +3,7 @@ package com.sythel.fishera.bootstrap;
 import com.sythel.fishera.Fishera;
 import com.sythel.fishera.builder.FishItemBuilder;
 import com.sythel.fishera.builder.RodItemBuilder;
+import com.sythel.fishera.config.ConfigManager;
 import com.sythel.fishera.registry.BaitRegistry;
 import com.sythel.fishera.registry.FishRegistry;
 import com.sythel.fishera.registry.RarityRegistry;
@@ -18,6 +19,8 @@ import com.sythel.fishera.service.FishingRewardService;
 import com.sythel.fishera.service.MessageService;
 import com.sythel.fishera.service.SellService;
 import com.sythel.fishera.service.TaskService;
+import com.sythel.fishera.simulation.EconomySimulationService;
+import com.sythel.fishera.simulation.SimulationConfig;
 import com.sythel.fishera.task.TaskData;
 
 import java.util.List;
@@ -25,6 +28,7 @@ import java.util.List;
 public class ServiceSetup {
 
     private final Fishera plugin;
+    private final ConfigManager configManager;
     private final FishRegistry fishRegistry;
     private final RarityRegistry rarityRegistry;
     private final RodRegistry rodRegistry;
@@ -38,6 +42,8 @@ public class ServiceSetup {
     private FishSelector fishSelector;
     private CaughtFishFactory caughtFishFactory;
     private EconomyService economyService;
+    private EconomySimulationService economySimulationService;
+    private SimulationConfig simulationConfig;
     private TaskService taskService;
     private FishingRewardService rewardService;
     private CollectionService collectionService;
@@ -45,6 +51,7 @@ public class ServiceSetup {
 
     public ServiceSetup(
             Fishera plugin,
+            ConfigManager configManager,
             FishRegistry fishRegistry,
             RarityRegistry rarityRegistry,
             RodRegistry rodRegistry,
@@ -56,6 +63,7 @@ public class ServiceSetup {
             MessageService messageService) {
 
         this.plugin = plugin;
+        this.configManager = configManager;
         this.fishRegistry = fishRegistry;
         this.rarityRegistry = rarityRegistry;
         this.rodRegistry = rodRegistry;
@@ -89,6 +97,18 @@ public class ServiceSetup {
 
         economyService =
                 new EconomyService(plugin);
+
+        economySimulationService =
+                new EconomySimulationService(
+                        rodRegistry,
+                        baitRegistry,
+                        fishRegistry
+                );
+
+        simulationConfig =
+                new SimulationConfig(
+                        configManager
+                );
 
         taskService =
                 new TaskService(
@@ -124,45 +144,38 @@ public class ServiceSetup {
     }
 
     public FishSelector getFishSelector() {
-
         return fishSelector;
-
     }
 
     public CaughtFishFactory getCaughtFishFactory() {
-
         return caughtFishFactory;
-
     }
 
     public EconomyService getEconomyService() {
-
         return economyService;
+    }
 
+    public EconomySimulationService getEconomySimulationService() {
+        return economySimulationService;
+    }
+
+    public SimulationConfig getSimulationConfig() {
+        return simulationConfig;
     }
 
     public TaskService getTaskService() {
-
         return taskService;
-
     }
 
     public FishingRewardService getRewardService() {
-
         return rewardService;
-
     }
 
     public CollectionService getCollectionService() {
-
         return collectionService;
-
     }
 
     public SellService getSellService() {
-
         return sellService;
-
     }
-
 }
